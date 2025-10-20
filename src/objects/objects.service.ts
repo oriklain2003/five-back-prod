@@ -436,7 +436,7 @@ export class ObjectsService {
           ``,
           detailedMessage.trim(),
           ``,
-          `התגלתה מטרה מהירה 5 מייל צפונית צפונית לקו גבול לבנון.`,
+          `התגלתה מטרה מהירה 20 מייל מגבול מזרח`,
           `סבירות 95 %`,
           `נדרש לפעול על המטרה מיידית :`
         ].join('\n');
@@ -534,10 +534,14 @@ export class ObjectsService {
       }
       // console.log(objectData);
       // Create updated object data
+      // Use last plot's position/rotation if available, otherwise use current object data
+      const hasPlots = objectData.plots && objectData.plots.length > 0;
+      const lastPlot = hasPlots ? objectData.plots[objectData.plots.length - 1] : null;
+      
       const updatedObjectData: MapObjectData = {
         ...objectData,
-        position: objectData.plots[objectData.plots.length - 1].position,
-        rotation: objectData.plots[objectData.plots.length - 1].rotation,
+        position: lastPlot ? lastPlot.position : objectData.position,
+        rotation: lastPlot ? lastPlot.rotation : objectData.rotation,
         type: updatedType,
         classification: updatedClassification,
       };

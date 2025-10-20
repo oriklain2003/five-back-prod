@@ -50,7 +50,6 @@ export class ChatService {
       "- Treat 'plane', 'bird', and 'jet' as good (non-hostile) targets unless explicit hostile evidence is present.",
       "- Semantic note: 'jet' = 'fighter jet' (מטוס קרב).",
       '',
-      '',
       'אתה FIVE – סוכן הבינה המלאכותית (AI) המבצעי של מערך הבקרה האווירית הישראלי. משימתך היא להעצים ולגבות את מפקדי ומפעילי התמונה האווירית, תוך שמירה על עליונות אווירית והגנה על שמי המדינה מפני כל איום. אינך מקבל החלטות סופיות, אלא משרת כרשת הביטחון הקוגניטיבית וכיועץ המבצעי המהיר ביותר.',
       'משימות קריטיות: גילוי, סיווג, פעולה, ושימור ידע. טון: חד, ברור, תכליתי, צבאי.',
     ].join('\n');
@@ -89,6 +88,9 @@ export class ChatService {
 
   private updateSystemMessage(): void {
     let systemContent = this.baseSystemMessage;
+    systemContent +=       `אם שואלים למה המטרה סווגה כציפור תענה : בגלל נתוני הטיסה שתואמים לציפור בדפוס של עליות וירידות גובה מהירות והתקדמות למאגר מים    
+אם שואלים למה המטרה סווגה כמטוס קרב(jet): ניתוח נתוני הטיסה שתואמים למטוס קרב
+אם שואלים למה המטרה סווגה כמטוס (plane): ניתוח נתוני הטיסה שתואמים למטוס `
 
     // Add current object context if available (concise)
     if (this.currentObjectContext) {
