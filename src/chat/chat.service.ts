@@ -23,14 +23,16 @@ export class ChatService {
   private systemMessages: Array<{ message: string; sender: string; timestamp: Date; buttons?: Array<{label: string; action: string; data?: any}> }> = [];
   private conversationHistory: ConversationMessage[] = [];
   private openai: OpenAI;
+  private openaiApiKey: string;
   private currentObjectContext: any = null;
   private baseSystemMessage: string;
   private chatMessageCallback: ((message: string, sender: string, buttons?: Array<{label: string; action: string; data?: any}>, objectData?: any) => void) | null = null;
 
   constructor() {
     // Initialize OpenAI with API key
+    this.openaiApiKey = process.env.OPENAI_API_KEY || '';
     this.openai = new OpenAI({
-      apiKey: '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',
+      apiKey: this.openaiApiKey,
     });
 
     // Set the base system context message (tight guardrails to prevent hallucinations)
@@ -438,7 +440,7 @@ export class ChatService {
       const response = await fetch('https://api.openai.com/v1/realtime/sessions', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.openai.apiKey}`,
+          'Authorization': `Bearer ${this.openaiApiKey}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
