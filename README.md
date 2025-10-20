@@ -1,0 +1,29 @@
+# Backend
+
+NestJS backend with Firebase integration.
+
+## Setup
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Create a `.env` file in the backend folder with:
+```
+PORT=3001
+FIREBASE_PROJECT_ID=five-166d2
+FIREBASE_CLIENT_EMAIL=firebase-adminsdk-fbsvc@five-166d2.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC6wgjBEgf2nMfD\n/MZ6jEoSxyEVBzFlC2rU0FAKYaIf8kA12jJqGT/xOK9BqgxKvylTWrSZfm04vfym\nTsdM7p52Fvifm2aMOHaHmCF++pgmbdI+/T/Qw2nXAwzQjqudk6kbSv3C3Qt4ZLSn\nqsa47xmDMTq+0uxgCOHjs9o2AYdwVFHUBwr6yZoYnNW7eNjr1cV8ryqAxDfbMzMx\n4ZQQIi8dtlGTkyStHu3qFZ+mJisSmYC4zMewhPkD+mR5pY2QlmSi7EmavySwqnc5\nd70JNo9Vgd0vSiorlYariNWz2qQDA0xZCdUS0lp+rwB9ChQdpjo6sgXRnlpWmFTW\nG1uDCWsFAgMBAAECggEADMo7j79koLjJfIxb6mofq4wMIbTJpvYidZsjlCZuFDqC\nt71u/PGoPaSoafqTl23ijmUUn7t3Du8B9cDI6OWhoAxAMCwUGI/IXE5ootnWIDGe\nt7Yfz/QGFFXO45yVt7e0Wdxnpxf80FyzO5VYQTOMv32YXJe03PnWwIGhdNfjdueN\nbO577lSuq02Py5RLR+OXnov8GfxBEKLs7lq1th5K4j+7OTQf8u66z9IcXhssfxpt\nqlEHFVgHZjRNNGlDElbeg68qB0gSD+ZF/dR6Km//e/1slOj7+34g+71lKmgXoghJ\nsoUWBL5boyG3fAOVFu20XQOT6mDdYDn4Wr8Jzn5bwQKBgQDk9QgXIdWcf8UESVye\njsQ6u2jZq8Qfpyoc02K+HEu5Gcrn/rKyIBFD/jlM1Gd6A2iOd0RH3iwB8d1k0LH4\nAytcKFt7TUvWKk7gw8yitxxvgqwIgNsbPgRVsBePr9dqMDyr+6tkc5AOS3X3Jshm\nKqOHtm3TthBdxPTMj6L+mhq0RQKBgQDQ0QbcL/Uz4jWC7NYX/OGohVJthhUf1pur\ntOn6QKrephmdWNpki4DPJl8hBvV002t69jCCic2i6ZOSPCsC/OqJBlOe5JhRpjyt\n8Ga6nbmQUS3kogY6myQi6mUk41RYfQKAxtgdGZVol1xr/CWyT+E+BMpLsQyNo6+Q\nDHC3gz0nwQKBgB17a/JGmhIP5de6dqG4Mo55iXPWCWgmB2c01Rcz35BTQOyEwI/t\nTyvZNZmuFDEC9Vi7BODYPAR4F5EeynvsNI4maDlFZ8mJIyUQMW6Wc6PsSKjDpvMo\nFjjOdwo6k1uKIJXoz1YdB2S/1M3hgZaeUPZtyFCltg/NB9S7fjqYr22dAoGAWy/c\nigzbTBPtgEYCXClPNbM6wp853FRwWHRBdMoGlAH+z4p8nEmbL1q3Ugni6Ghm2CRo\nHKkmxoyvp71knwJpPPspSwrSRV2Nw/tmMPotjYsVunDSvYcAKcsn7grjy1yT2j57\nI4IHj8wBTRqoL4zYdKfM227uZ2/ie8oi8tB5xUECgYEAhAutX1DpLoT8LpkQa3OL\ngE/DlakbP7RvB31iOmGsrz6BGx56Ge3FMyMrVTOImQ8xqiEmNS65wbZFz9xNyYtK\n2HYNNGVxJU83quaU4AC0LvLiXtWQGov1lfeK9mwqXlAUNfMi0xAycjywT2VtZ7jp\nEN7wYN4z0wmyAPG2giZKGsE=\n-----END PRIVATE KEY-----\n"
+```
+
+## Run
+
+```bash
+npm run start:dev
+```
+
+## API Documentation
+
+Swagger: http://localhost:3001/api
+
