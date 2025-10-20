@@ -30,7 +30,7 @@ export class ChatService {
   constructor() {
     // Initialize OpenAI with API key
     this.openai = new OpenAI({
-      apiKey: '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',
+      apiKey: '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',
     });
 
     // Set the base system context message (tight guardrails to prevent hallucinations)
